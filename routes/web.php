@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/user', 'UserController@index');
+Route::get('/tweet', 'TweetController@index');
+Route::get('/bbs', 'BbsController@index');
+Route::post('/bbs', 'BbsController@create');
