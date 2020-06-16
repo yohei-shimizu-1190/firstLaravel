@@ -20,11 +20,13 @@
   @endif
 
   <!-- 直前投稿エリア -->
-  @isset($name, $comment)
-  <h2>{{ $name }}さんの直前の投稿</h2>
-  {{ $comment }}
+  @isset($bbs)
+  @foreach ($bbs as $d)
+  <h2>{{ $d->name }}さんの直前の投稿</h2>
+  {{ $d->comment }}
   <br>
   <hr>
+  @endforeach
   @endisset
   <!-- フォームエリア -->
   <h2>フォーム</h2>
